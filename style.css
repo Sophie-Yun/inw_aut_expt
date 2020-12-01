@@ -1,0 +1,294 @@
+body {
+    background-color: #b4c0ca;
+    font-family: "Open Sans", sans-serif;
+    font-family: "Work Sans", sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.pageBox {
+    display:none;
+}
+
+#instrPage, #aqInstrText, #aqBox, #questionsBox, #thankPage  {
+    display: block;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 100px auto 0px;
+    position: relative;
+    /*text-align: justify;*/
+}
+
+#instrPage, #aqInstrText, #questionsBox, #thankPage  {
+    width: 50%;
+}
+
+#aqBox {
+    display: none;
+}
+
+#questionsBox {
+    display: none;
+}
+
+#thankPage {
+    display: none;
+}
+
+#instrText {
+    margin-bottom: 100px;
+    position: relative;
+}
+
+#instrQWarning {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+#instrImg {
+    display: none;
+    margin:100px auto;
+    width: 300px;
+    position: relative;
+}
+
+.consentInstr {
+    font-size: 20px;
+    line-height: 60px;
+}
+
+#consentBox {
+    margin: 40px auto;
+}
+
+#consentTextBox {
+    padding: 20px;
+    width: 95%;
+    font-size: 16px;
+    line-height: 25px;
+    background: #84a9ac;
+    border-style: dotted;
+    border-color: #ddd;
+}
+
+#aqQ {
+    font-weight: 900;
+    padding: 100px 0 10px 0;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+}
+
+
+/*
+ ####### ######  ###    #    #       
+    #    #     #  #    # #   #       
+    #    #     #  #   #   #  #       
+    #    ######   #  #     # #       
+    #    #   #    #  ####### #       
+    #    #    #   #  #     # #       
+    #    #     # ### #     # ####### 
+                                     
+*/
+#strawbFrame {
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 50px;
+    position: relative;
+    height: 300px;
+    width: 670px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+
+#strawbPic {
+    cursor: pointer; 
+    position: relative;
+    height: 300px;
+    left: 0px;
+    width: 670px;
+}
+
+#testFrame {
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    position: absolute;
+    height: 300px;
+    margin-top: 100px;
+    width: 670px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+#testImg, #bufferImg, #firstBufferSti, #firstBufferBkg {
+    bottom: 0px;
+    cursor: pointer; 
+    position: inherit;
+    left: 260px; /* FRAME_WIDTH/2 - STIM_WIDTH/2 */
+}
+
+#bufferFrame, #firstBufferFrame {
+    display: none;
+}
+
+#aqContainer {
+    display: none;
+}
+
+#aqProgressBar{
+    font-weight: bold;
+    position: relative;
+    margin: 50px 0;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+}
+
+/*                                        
+ #####  #    # ##### #####  ####  #    # 
+ #    # #    #   #     #   #    # ##   # 
+ #####  #    #   #     #   #    # # #  # 
+ #    # #    #   #     #   #    # #  # # 
+ #    # #    #   #     #   #    # #   ## 
+ #####   ####    #     #    ####  #    # 
+*/                                       
+.butNext{
+    background-color: #dafbec; 
+    border-color: black;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    cursor: pointer; 
+    display: block;
+    font-size: 16px;
+    margin: auto;
+    width: 100px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.butNext:hover {
+    background-color: #c5e7d7;
+}
+
+#expBut {
+    margin-top: 500px;
+    /* margin-left: auto; */
+    left: 50%;
+    transform: translate(-50%, 0px);
+    padding: 10px 20px;
+    position: fixed;
+} 
+
+#aqBut {
+    display: none;
+}
+
+.aqButton:hover{
+	border-color: #006060;
+}
+
+.aqButton:active{
+	background: white;
+}
+
+/*
+ ####### ####### ######  #     # 
+ #       #     # #     # ##   ## 
+ #       #     # #     # # # # # 
+ #####   #     # ######  #  #  # 
+ #       #     # #   #   #     # 
+ #       #     # #    #  #     # 
+ #       ####### #     # #     # 
+                                 
+*/
+
+#quizBox {
+    background-color: aliceblue;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    color: black;
+    margin: 0px auto 50px;
+    padding: 10px;
+}
+.option {
+    position: relative;
+    margin: auto;
+    padding: 10px;
+    /*text-align: justify;*/
+    border-radius: 8px;
+    cursor: pointer;
+}
+.option:hover {
+    background: gray;
+}
+.optionRadio {
+    position: absolute;
+    margin: 0;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.optionText {
+    position: relative;
+    left: 40px;
+    width: calc(100% - 60px);
+}
+
+.aq4, .aq3, .aq2, .aq1  {
+    background: #d9f2f2;
+}
+
+#aqOptionsContainer {
+    position: relative;
+    width: 556px;
+    left: 50%;
+    transform: translate(-50%, 50px);
+}
+.ratingButton{
+	position: absolute;
+    width: 110px;
+    height: 70px;
+    color: black;
+    border: 2px solid white;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.ratingButton:hover{
+	border-color: #333388;
+}
+.ratingButton:active{
+	background: white;
+}
+.r2{
+	left: 20px;
+	background: #ccccff;
+}
+.r3{
+	left: 154px;
+	background: #b3b3ff;
+}
+.r4{
+	left: 288px;
+	background: #9999ff;
+}
+.r5{
+	left: 422px;
+	background: #8080ff;
+}
+.smallDimText {
+    font-size: 16px;
+    line-height: 25px;
+}

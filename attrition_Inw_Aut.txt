@@ -1,0 +1,4 @@
+subjNum	startDate	startTime	id	userAgent	inView	viewportW	viewportH
+1	2020-08-28	07:46:54	undefined	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36	false	704	789
+subjNum	startDate	startTime	id	userAgent	inView	viewportW	viewportH
+1	2020-08-28	16:42:18	undefined	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36	false	704	789

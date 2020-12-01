@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Experiment</title>
+        <link rel="shortcut icon" href="favicon-32x32.png">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js'></script>
+        <script src="func.js"></script>
+        <script src="expt.js"></script>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <noscript>It seems that JavaScript is disabled in your browser. Please go to settings and enable JavaScript for this experiment.</noscript>
+        <!--=====INSTRUCTIONS=====-->
+        <div class="pageBox" id="instrPage">
+            <!--=====PRACTICE TRIAL=====-->
+            <div class="pageBox" id="pracTrialBox">
+                <div id="strawbFrame">
+                    <img id="strawbPic" src="strawbMed.png" alt="An error occurred when loading the picture." onclick="ADJUST_FIGURE(event)">
+                </div>
+            </div>
+            <!--=====TEXT AND BUTTON=====-->
+            <p id="instrText"></p>
+            <img id= "instrImg" alt="Error occurred when loading the image.">
+            <button class="butNext" id="instrBut" onclick="instr.next()">NEXT</button>
+            <!--=====INSTRUCTION QUIZ=====-->
+            <div class="pageBox" id="instrQBox">
+                <p id="instrQText">What is your task in this experiment?</p>
+                <div id="quizBox">
+                <label><div class="option"><input class="optionRadio" type="radio" name="instrQ" value="forget"><div class="optionText">Select this option if you do not remember the instructions.</div></div></label>
+                <label><div class="option"><input class="optionRadio" type="radio" name="instrQ" value="center"><div class="optionText">To place the figure in the center of the whole picture.</div></div></label>
+                <label><div class="option"><input class="optionRadio" type="radio" name="instrQ" value="least"><div class="optionText">To place the figure at the least visually pleasing position.</div></div></label>
+                <label><div class="option"><input class="optionRadio" type="radio" name="instrQ" value="most"><div class="optionText">To place the figure at the most visually pleasing position.</div></div></label>
+                </div>
+                <div class='warning' id='instrQWarning'></div>
+                <div class="butNext" id="instrQuiz" onclick="SUBMIT_INSTR_Q()">SUBMIT</div>
+            </div>
+            <!--========INFORMED CONSENT FORM========-->
+            <div class="pageBox" id="consentBox">
+                <div id="consentTextBox">
+                    <strong>CONSENT FORM</strong><br /> <!-- XXX I'll add this later -->
+                    Your consent form here.
+                </div>
+                <div id="firstBufferFrame">
+                    <img id="firstBufferSti" src="blank.png" alt="">
+                    <img id="firstBufferBkg" src="blank.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <!--======== EXPERIMENT TRIAL ========-->
+        <div class="pageBox" id="trialPage">
+            <div id="testFrame">
+                <img id="testImg" src="blank.png" alt="" draggable="false" onclick="ADJUST_TEST_FIGURE(event)">
+            </div>
+            <div id="bufferFrame">
+                <img id="bufferImg" src="blank.png" alt="">
+            </div>
+            <button class="butNext" id="expBut" onclick="END_TRIAL()">NEXT</button>
+    
+        </div> 
+        <!--======== AQ QUESTION ========-->
+        <div class="pageBox" id="aqBox">
+            <p id="aqInstrText">You have completed the first part!<br /><br />In the second part, you will answer some questions. This will take about 10 minutes and likely shorter.<br /><br />Hit SPACE to start!</p>
+            <div id="aqContainer">
+                <div id='aqProgressBar'><span id='aqProgress'>0</span>% completed</div>
+                <div id='aqQ'></div>
+                <div id='aqOptionsContainer'>
+                    <div class='ratingButton aqButton r2 aq4'><p class='ratingLabels' id='aq4'>Definitely<br />Disagree</p></div>
+                    <div class='ratingButton aqButton r3 aq3'><p class='ratingLabels' id='aq3'>Slightly<br />Disagree</p></div>
+                    <div class='ratingButton aqButton r4 aq2'><p class='ratingLabels' id='aq2'>Slightly<br />Agree</p></div>
+                    <div class='ratingButton aqButton r5 aq1'><p class='ratingLabels' id='aq1'>Definitely<br />Agree</p></div>
+                </div>
+            </div>
+        </div>
+        <!--======== DEBRIEFING QUESTION ========-->
+        <div class='pageBox' id='questionsBox'>
+            You are almost done! Please answer these last questions:<br /><br /><br />
+
+            <strong>Did you complete this experiment seriously throughout (without randomly responding)?</strong>
+            <div class='smallDimText'>You will receive credit regardless what your answer is here. Please be honest for science! Thanks!</div>
+            <label><div class="option"><input class='optionRadio' type='radio' name='serious' value='0' /><div class='optionText'>No, I didn't.</div></div></label>
+            <label><div class="option"><input class='optionRadio' type='radio' name='serious' value='1' /><div class='optionText'>Yes, I did.</div></div></label>
+
+            <br><br><br>
+
+            <strong> Was any part of the procedure unclear? Did you have any problems completing any of the tasks?</strong>
+            <div class='smallDimText'>You will receive credit regardless what your answer is here. Please be honest for science! Thanks!</div>
+            <textarea id='problems' name="debQ" rows="3" cols="90"></textarea>
+
+            <br><br><br>
+
+            <strong>What is your gender?</strong>
+            <label><div class="option"><input class='optionRadio' type='radio' name='gender' value='F' /><div class='optionText'>Female</div></div></label>
+            <label><div class="option"><input class='optionRadio' type='radio' name='gender' value='M' /><div class='optionText'>Male</div></div></label>
+            <label><div class="option"><input class='optionRadio' type='radio' name='gender' value='O' /><div class='optionText'>Other</div></div></label>
+            <label><div class="option"><input class='optionRadio' type='radio' name='gender' value='N' /><div class='optionText'>I would rather not say</div></div></label>
+  
+          
+            <br><br><br>
+
+            <strong>What is your age?</strong>
+            <input type='number' id='age' name="debQ" min="18" max="100">
+
+            <br><br><br>
+
+            <p id="debQWarning"></p>
+            <div class='butNext' onclick='SUBMIT_DEBRIEFING_Q()'>SUBMIT</div>
+            <br />
+        </div>
+        <!--=====Thank You Page=====-->
+        <div class="pageBox" id="thankPage">
+                <strong>Thank you for completing this experiment!</strong><br><br><br> Whenever you are ready, click END to get credit.<br><br>
+                <div class='butNext' onclick='END_TO_SONA()'>END</div>
+                <br><br>
+
+                Interested in what we are testing? See below for more information!<br><br>
+                The purpose of this study is to investigate the a visual phenomenon called inward bias, which is the tendency for people to prefer aesthetic compositions that have figures facing towards the center of a frame.<br><br>
+                This study examined whether this phenomenon of leaving more space in the figures' facing direction can be explained by people's expectation to see what will happen in the future. This kind of study can help us understand some of the principles in visual perception.<br><br>
+                Please don't hesitate to contact us if you have any question or concern about this experiment.
+        </div>
+    </body>
+</html>

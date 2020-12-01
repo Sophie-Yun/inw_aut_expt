@@ -1,0 +1,12 @@
+subjNum	startDate	startTime	id	userAgent	inView	viewportW	viewportH
+pre-post	2020-08-10	08:46:10	undefined	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36	true	1440	789
+subjNum	startDate	startTime	id	userAgent	inView	viewportW	viewportH
+pre-post	2020-08-10	08:47:19	undefined	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36	true	1440	789
+subjNum	startDate	startTime	id	userAgent	inView	viewportW	viewportH
+pre-post	2020-08-10	08:48:19	undefined	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36	true	1440	789
+subjNum	startDate	startTime	id	userAgent	inView	viewportW	viewportH
+pre-post	2020-08-10	08:52:55	undefined	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36	true	1440	789
+subjNum	startDate	startTime	id	userAgent	inView	viewportW	viewportH
+pre-post	2020-08-10	08:54:35	undefined	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36	true	1440	789
+subjNum	startDate	startTime	id	userAgent	inView	viewportW	viewportH
+pre-post	2020-08-10	08:54:37	undefined	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36	true	1440	789
